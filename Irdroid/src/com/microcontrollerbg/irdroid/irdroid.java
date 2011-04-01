@@ -22,6 +22,7 @@ import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -31,6 +32,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 
 import android.os.Vibrator;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
@@ -56,6 +58,7 @@ public int number=0;
 byte     	    buffer[];
 	protected String com;
 	protected String dev;
+	SharedPreferences mPrefs;
 
  public AudioTrack ir;
 	public  int bufSize = AudioTrack.getMinBufferSize(48000,
@@ -208,8 +211,12 @@ byte     	    buffer[];
        // ll.setOrientation(LinearLayout.VERTICAL);
         //ll.setKeepScreenOn(true);
        
-       
-
+        firstRunPreferences();
+        if(getFirstRun()){
+        	About();
+        	setRunned();
+        	
+        }
         setContentView(R.layout.apple);
     //    Button info_play = (Button) findViewById(R.id.Button02);
         Button apple_volup = (Button) findViewById(R.id.apple_volup);
@@ -719,33 +726,45 @@ SystemClock.uptimeMillis() + 250);
     
     public String selectFile(){
 		
-		final EditText ed = new EditText(this);
-		
-    	Builder builder = new Builder(this);
-    	builder.setTitle("Select a file to parse");
-    	builder.setView(ed);
-
-    	
-
-    	builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {
-
-//			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				if (which == Dialog.BUTTON_NEGATIVE) {
-					dialog.dismiss();
-					return;
-				}
-
-				parse(ed.getText().toString());
-			}});
-			
-		builder.setNegativeButton("Cancel", null);
-	   	final AlertDialog asDialog = builder.create();
-	  	asDialog.show();   	
-    	return null;
+    	final EditText ed = new EditText(this);
+    		
+        	Builder builder = new Builder(this);
+        	builder.setTitle("Select a file to parse");
+        	builder.setView(ed);
+        	builder.setPositiveButton("Save", new DialogInterface.OnClickListener() {  	
+    			public void onClick(DialogInterface dialog, int which) {
+    				if (which == Dialog.BUTTON_NEGATIVE) {
+    					dialog.dismiss();
+    					return;
+    				}
+    				parse(ed.getText().toString());
+    			}});    			
+    		builder.setNegativeButton("OK", null);
+    	   	final AlertDialog asDialog = builder.create();
+    	  	asDialog.show();  
+        	return null;
+	
     }
 
-    
+    public String About(){
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.app_name)
+              //  .setIcon(R.drawable.dialog_icon)
+               .setMessage(R.string.info)
+               .setCancelable(true)
+               .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                   }
+               });
+
+        AlertDialog welcomeAlert = builder.create();
+        welcomeAlert.show();
+        // Make the textview clickable. Must be called after show()
+        ((TextView)welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
+return null;
+	
+    }
     
     
     public boolean parse (String config_file) {
@@ -757,8 +776,8 @@ SystemClock.uptimeMillis() + 250);
     		if (config_file != LIRCD_CONF_FILE)
     			Toast.makeText(getApplicationContext(), "The Selected file doesn't exist", Toast.LENGTH_SHORT).show();
     		else
-    			Toast.makeText(getApplicationContext(), "Configuartion file missing", Toast.LENGTH_SHORT).show();
-    		selectFile();
+    			Toast.makeText(getApplicationContext(), "Configuartion file missing, please update the db", Toast.LENGTH_SHORT).show();
+    		//selectFile();
     		return false;
     	}
     	
@@ -900,7 +919,7 @@ commandList.clear();
         menu.add(0, 1, 0, "Clear conf").setIcon(android.R.drawable.ic_menu_delete);
         menu.add(0, 2, 0, "Update db").setIcon(android.R.drawable.ic_input_add);
         menu.add(0, 3, 0, "Send").setIcon(android.R.drawable.arrow_up_float);
-
+        menu.add(0, 4, 0, "About").setIcon(android.R.drawable.ic_menu_help);
         return true;
     }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -914,7 +933,62 @@ commandList.clear();
     	 //  Toast.makeText(getApplicationContext(), "Doobre", Toast.LENGTH_SHORT).show();
     	  }
     	 }
-   
+
+    
+    /**
+ 
+     * get if this is the first run
+ 
+     *
+ 
+     * @return returns true, if this is the first run
+
+     */
+
+        public boolean getFirstRun() {
+ 
+        return mPrefs.getBoolean("firstRun", true);
+ 
+     }
+ 
+     
+
+     /**
+
+     * store the first run
+
+     */
+
+     public void setRunned() {
+
+        SharedPreferences.Editor edit = mPrefs.edit();
+
+        edit.putBoolean("firstRun", false);
+
+        edit.commit();
+
+     }
+
+     
+
+     
+
+     
+
+     /**
+
+     * setting up preferences storage
+
+     */
+
+     public void firstRunPreferences() {
+
+        Context mContext = this.getApplicationContext();
+
+        mPrefs = mContext.getSharedPreferences("myAppPrefs", 0); //0 = mode private. only this app can read these preferences
+
+     }
+
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()) {
     	case 0:
@@ -940,6 +1014,10 @@ commandList.clear();
 						e.printStackTrace();
 					}	
     		break;
+    	case 4:
+        	
+    		About();
+                  break;
     	}
     	return false;
     }

@@ -10,4 +10,6 @@
     <string name="power">POWER</string>
  <string name="planet_prompt">Select a device:</string>
   <string name="select">Select a device:</string>
+  <string name="info">To use this app you have to purchase Irdroid module from <a href="http://www.georgibakalski.info">Irdroid website</a></string> 
+
 </resources>
