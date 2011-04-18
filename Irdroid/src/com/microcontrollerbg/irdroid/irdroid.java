@@ -23,7 +23,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
@@ -34,21 +33,21 @@ import android.os.SystemClock;
 import android.os.Vibrator;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
-import android.view.Display;
+
+import android.view.KeyEvent;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
+
 
 import android.view.View.OnTouchListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,7 +58,7 @@ byte     	    buffer[];
 	protected String com;
 	protected String dev;
 	SharedPreferences mPrefs;
-
+private AudioManager audio;
  public AudioTrack ir;
 	public  int bufSize = AudioTrack.getMinBufferSize(48000,
     		AudioFormat.CHANNEL_CONFIGURATION_STEREO,
@@ -88,7 +87,7 @@ byte     	    buffer[];
         
         String coolcmd="VOL-";
         //	Log.i("repeatBtn", "repeat click");
-          //  myVib.vibrate(50);		
+            myVib.vibrate(50);		
 		       
 	        
 	       
@@ -202,9 +201,17 @@ byte     	    buffer[];
     };
     public void onCreate(Bundle savedInstanceState) {
     	
-      
+    	audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+    	int currentVolume = audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+    	audio.setStreamVolume(AudioManager.STREAM_MUSIC,currentVolume/2, 0);
+    	audio = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+    	
+
+   
+
+
         super.onCreate(savedInstanceState);
-       
+ 
 
         
       //  LinearLayout ll = new LinearLayout(this);
@@ -362,7 +369,7 @@ byte     	    buffer[];
     		        	
     		        	return true;
     		        }
-                //	myVib.vibrate(50);		
+                	myVib.vibrate(50);		
     		      
     		        String mycmd="VOL-";
     		       
@@ -747,24 +754,27 @@ SystemClock.uptimeMillis() + 250);
     }
 
     public String About(){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.app_name)
+    	AlertDialog.Builder about = new AlertDialog.Builder(this);
+        about.setTitle(R.string.app_name)
               //  .setIcon(R.drawable.dialog_icon)
                .setMessage(R.string.info)
                .setCancelable(true)
-               .setNegativeButton("OK", new DialogInterface.OnClickListener() {
-                   public void onClick(DialogInterface dialog, int id) {
+               .setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                  public void onClick(DialogInterface dialog, int id) {
                         dialog.dismiss();
                    }
-               });
+              });
 
-        AlertDialog welcomeAlert = builder.create();
+        AlertDialog welcomeAlert = about.create();
         welcomeAlert.show();
-        // Make the textview clickable. Must be called after show()
+   //      Make the textview clickable. Must be called after show()
         ((TextView)welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 return null;
 	
     }
+    
+    
+
     
     
     public boolean parse (String config_file) {
@@ -783,7 +793,7 @@ return null;
     	
     	if (lirc.parse(config_file) == 0) {
  			Toast.makeText(getApplicationContext(), "Couldn't parse the selected file", Toast.LENGTH_SHORT).show();
-			selectFile();
+			//selectFile();
     		return false;
     	}
     	
@@ -816,7 +826,7 @@ return null;
         
         if (str == null){
  			Toast.makeText(getApplicationContext(), "Invalid, empty or missing config file", Toast.LENGTH_SHORT).show();
-			selectFile();
+			//selectFile();
     		return;
         }
         
@@ -970,6 +980,23 @@ commandList.clear();
      }
 
      
+     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        switch (keyCode) {
+    	    case KeyEvent.KEYCODE_VOLUME_UP:
+    	        audio.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+    	                AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI);
+    	        return true;
+    	    case KeyEvent.KEYCODE_VOLUME_DOWN:
+    	        audio.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+    	                AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI);
+    	        return true;
+    	    
+    	        
+    	    default:
+    	    	super.onKeyDown(keyCode, event);
+return false;
+    	    }
+    	}
 
      
 

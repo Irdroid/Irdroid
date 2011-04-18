@@ -10,6 +10,6 @@
     <string name="power">POWER</string>
  <string name="planet_prompt">Select a device:</string>
   <string name="select">Select a device:</string>
-  <string name="info">To use this app you have to purchase Irdroid module from <a href="http://www.georgibakalski.info">Irdroid website</a></string> 
+  <string name="info">To <b>use</b> this app you have to <b>purchase</b> Irdroid module from <a href="http://www.georgibakalski.info">Irdroid website</a> After you purchase a module the app can be used to control your favourite TV or STB. Please tap MENU->UpdateDB to update the database of the supported remotes.</string> 
 
 </resources>
