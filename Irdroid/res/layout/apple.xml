@@ -37,7 +37,7 @@ android:id="@+id/InnerRelativeLayout"
 
 
 
-<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner02" android:layout_width="fill_parent"  android:layout_alignParentBottom="true"></Spinner>
+<ca.idi.tecla.lib.Spinner android:layout_height="wrap_content" android:id="@+id/Spinner02" android:layout_width="fill_parent"  android:layout_alignParentBottom="true"></ca.idi.tecla.lib.Spinner>
  <TextView  
          android:layout_width="fill_parent"  
         android:layout_height="wrap_content"  
@@ -45,7 +45,7 @@ android:id="@+id/InnerRelativeLayout"
         android:layout_above="@+id/Spinner01"
        android:text="@string/planet_prompt"  
     />
-     <Spinner android:layout_height="wrap_content" android:id="@+id/Spinner01" android:layout_width="fill_parent" android:prompt="@string/select" android:layout_above="@+id/Spinner02" android:layout_alignLeft="@+id/Spinner02" android:layout_alignRight="@+id/Spinner02"></Spinner>
+     <ca.idi.tecla.lib.Spinner android:layout_height="wrap_content" android:id="@+id/Spinner01" android:layout_width="fill_parent" android:prompt="@string/select" android:layout_above="@+id/Spinner02" android:layout_alignLeft="@+id/Spinner02" android:layout_alignRight="@+id/Spinner02"></ca.idi.tecla.lib.Spinner>
 
 </RelativeLayout>
 

@@ -1,4 +1,4 @@
-package com.microcontrollerbg.irdroid;
+	package com.microcontrollerbg.irdroid;
 
 
 import java.io.FileInputStream;
@@ -48,7 +48,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
-import android.widget.Spinner;
+import ca.idi.tecla.lib.InputAccess;
+import ca.idi.tecla.lib.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -77,6 +78,8 @@ private AudioManager audio;
 	ArrayAdapter<String> commandList;
 	private Vibrator myVib;
 	public String gdevice;	
+	
+	private InputAccess inputAccess = new InputAccess(this, false);
  
     private Runnable voldown = new Runnable()
     {
@@ -211,7 +214,7 @@ private AudioManager audio;
 
 
         super.onCreate(savedInstanceState);
- 
+        inputAccess.onCreate();
 
         
       //  LinearLayout ll = new LinearLayout(this);
@@ -767,6 +770,7 @@ SystemClock.uptimeMillis() + 250);
 
         AlertDialog welcomeAlert = about.create();
         welcomeAlert.show();
+        InputAccess.showBelowIME(welcomeAlert);
    //      Make the textview clickable. Must be called after show()
         ((TextView)welcomeAlert.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 return null;
