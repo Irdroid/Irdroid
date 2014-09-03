@@ -15,7 +15,7 @@ Supported hardware:
 
 - [Irdroid v1.0 modules](http://www.irdroid.com/purchase)
 
-- [Irdroid v2.0 Bluetooth modules](http://www.irdroid.com)
+- [Irdroid v2.0 Bluetooth modules](http://www.irdroid.com/irdroid-v2/)
 
 
 
