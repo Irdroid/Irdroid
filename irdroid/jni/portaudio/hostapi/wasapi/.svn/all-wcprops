@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/!svn/ver/1553/portaudio/trunk/src/hostapi/wasapi
+END
+pa_win_wasapi.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/!svn/ver/1553/portaudio/trunk/src/hostapi/wasapi/pa_win_wasapi.c
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/readme.txt
+END

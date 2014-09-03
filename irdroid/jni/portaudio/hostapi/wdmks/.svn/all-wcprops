@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/repos/!svn/ver/1411/portaudio/trunk/src/hostapi/wdmks
+END
+pa_win_wdmks.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/!svn/ver/1411/portaudio/trunk/src/hostapi/wdmks/pa_win_wdmks.c
+END
+readme.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/wdmks/readme.txt
+END

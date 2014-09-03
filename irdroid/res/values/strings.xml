@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, AndrolircMain!</string>
+    <string name="app_name">Irdroid</string>
+    <string name="vol_up_str">VOL +</string>
+    <string name="vol_down_str">VOL -</string>
+    <string name="mute">MUTE</string>
+    <string name="tvplus">CH+</string>
+    <string name="tvminus">CH-</string>
+    <string name="power">POWER</string>
+ <string name="planet_prompt">Select a device:</string>
+  <string name="select">Select a device:</string>
+  <string name="info"><body style="text-align:justify;">To use this application you need to <b>purchase</b> Irdroid module from the <a href="http://www.irdroid.com/purchase">Irdroid Website</a> After you purchase a module the app can be used to control your TV or STB. Please tap menu->updatedb to update the database of the supported remotes. Please also read the App <a href="http://www.irdroid.com/documentation">Documentation</a></body></string>
+
+</resources>

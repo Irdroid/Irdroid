@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/repos/!svn/ver/1525/portaudio/trunk/src/hostapi/asio
+END
+iasiothiscallresolver.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/!svn/ver/1486/portaudio/trunk/src/hostapi/asio/iasiothiscallresolver.h
+END
+Pa_ASIO.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/asio/Pa_ASIO.pdf
+END
+ASIO-README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/asio/ASIO-README.txt
+END
+Callback_adaptation_.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/asio/Callback_adaptation_.pdf
+END
+iasiothiscallresolver.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1488/portaudio/trunk/src/hostapi/asio/iasiothiscallresolver.cpp
+END
+pa_asio.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/!svn/ver/1525/portaudio/trunk/src/hostapi/asio/pa_asio.cpp
+END

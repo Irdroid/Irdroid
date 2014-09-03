@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/!svn/ver/1544/portaudio/trunk/src/hostapi/coreaudio
+END
+pa_mac_core_blocking.c
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/1395/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_blocking.c
+END
+pa_mac_core_utilities.c
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/1544/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_utilities.c
+END
+notes.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/coreaudio/notes.txt
+END
+pa_mac_core_blocking.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_blocking.h
+END
+pa_mac_core_old.c
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/1379/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_old.c
+END
+pa_mac_core.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/!svn/ver/1544/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core.c
+END
+pa_mac_core_utilities.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/1423/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_utilities.h
+END
+pa_mac_core_internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/1537/portaudio/trunk/src/hostapi/coreaudio/pa_mac_core_internal.h
+END

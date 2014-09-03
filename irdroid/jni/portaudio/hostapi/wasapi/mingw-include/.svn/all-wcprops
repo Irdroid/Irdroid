@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include
+END
+propkey.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/propkey.h
+END
+AudioSessionTypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/!svn/ver/1471/portaudio/trunk/src/hostapi/wasapi/mingw-include/AudioSessionTypes.h
+END
+structuredquery.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/structuredquery.h
+END
+devicetopology.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/devicetopology.h
+END
+shtypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1474/portaudio/trunk/src/hostapi/wasapi/mingw-include/shtypes.h
+END
+audioclient.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/1470/portaudio/trunk/src/hostapi/wasapi/mingw-include/audioclient.h
+END
+FunctionDiscoveryKeys_devpkey.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/FunctionDiscoveryKeys_devpkey.h
+END
+propkeydef.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/propkeydef.h
+END
+endpointvolume.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/endpointvolume.h
+END
+propidl.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1472/portaudio/trunk/src/hostapi/wasapi/mingw-include/propidl.h
+END
+functiondiscoverykeys.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/functiondiscoverykeys.h
+END
+ksmedia.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include/ksmedia.h
+END
+ks.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include/ks.h
+END
+propsys.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/propsys.h
+END
+ksproxy.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include/ksproxy.h
+END
+sal.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/sal.h
+END
+sdkddkver.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/sdkddkver.h
+END
+mmdeviceapi.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/1466/portaudio/trunk/src/hostapi/wasapi/mingw-include/mmdeviceapi.h
+END
+rpcsal.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/1473/portaudio/trunk/src/hostapi/wasapi/mingw-include/rpcsal.h
+END
+ksguid.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include/ksguid.h
+END
+ksuuids.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/1538/portaudio/trunk/src/hostapi/wasapi/mingw-include/ksuuids.h
+END
