@@ -13,6 +13,7 @@ Supported hardware:
 - [Irdroid v2.0 Bluetooth modules](http://www.irdroid.com)
 
 Irdroid v1.0
+-> This is centered Text <-
+-> ![Irdroid v1.0 Module](http://www.irdroid.com/wp-content/uploads/2012/01/Irdroid_v10.png "Irdroid v1.0") <-
 
-->![Irdroid v1.0 Module](http://www.irdroid.com/wp-content/uploads/2012/01/Irdroid_v10.png "Irdroid v1.0")<-
 
