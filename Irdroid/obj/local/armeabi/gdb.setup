@@ -1,0 +1,4 @@
+set solib-search-path /home/zokama/Prog/Workspace/AndroLirc/obj/local/armeabi
+directory /home/zokama/Prog/android-ndk-r5/platforms/android-4/arch-arm/usr/include lirc /home/zokama/Prog/Workspace/AndroLirc/jni /home/zokama/Prog/Workspace/AndroLirc/jni/lirc/tools /home/zokama/Prog/Workspace/AndroLirc/jni/lirc/daemons portaudio/common portaudio/include portaudio/os/unix /home/zokama/Prog/Workspace/AndroLirc/jni/portaudio /home/zokama/Prog/android-ndk-r5/sources/cxx-stl/system
+file /home/zokama/Prog/Workspace/AndroLirc/obj/local/armeabi/app_process
+target remote :5039

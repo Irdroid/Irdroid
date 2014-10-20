@@ -1,0 +1,55 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+
+  android:layout_width="fill_parent"
+
+  android:layout_height="fill_parent">
+  	
+
+       
+  
+
+<TableLayout android:id="@+id/TableLayout01" android:layout_alignParentTop="true" android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" android:stretchColumns="0,1,2" android:layout_height="wrap_content" android:background="@drawable/apple_bg">
+
+<TableRow android:id="@+id/TableRow01" android:layout_width="wrap_content" android:layout_height="wrap_content">
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vol_up_str" android:id="@+id/apple_volup" android:layout_weight="50" android:drawableTop="@drawable/speaker_plus" android:nextFocusLeft="@+id/Spinner02" android:nextFocusUp="@id/Spinner02"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mute" android:id="@+id/apple_menu" android:layout_weight="50" android:drawableTop="@drawable/speaker_off" android:nextFocusUp="@id/Spinner02"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tvplus" android:id="@+id/apple_next" android:layout_weight="50" android:drawableTop="@drawable/tv_plus" android:nextFocusRight="@+id/apple_voldn" android:nextFocusUp="@id/Spinner02"/>
+
+</TableRow>
+<TableRow android:id="@+id/TableR0ow02" android:layout_width="wrap_content" android:layout_height="wrap_content">
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vol_down_str" android:id="@+id/apple_voldn" android:layout_weight="50" android:drawableTop="@drawable/speaker_minus" android:nextFocusLeft="@id/apple_next" android:nextFocusDown="@+id/Spinner01"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power" android:id="@+id/apple_play" android:layout_weight="50" android:drawableTop="@drawable/stop" android:nextFocusDown="@id/Spinner01"/>
+
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tvminus" android:id="@+id/apple_prev" android:layout_weight="50" android:drawableTop="@drawable/tv_minus" android:nextFocusDown="@id/Spinner01" android:nextFocusRight="@id/Spinner01"/>
+
+</TableRow>
+
+
+<RelativeLayout         android:layout_alignParentBottom="true" 
+android:id="@+id/InnerRelativeLayout"
+
+>
+
+
+
+
+
+
+
+<ca.idi.tecla.lib.Spinner android:layout_height="wrap_content" android:id="@+id/Spinner02" android:layout_width="fill_parent"  android:layout_alignParentBottom="true" android:nextFocusLeft="@id/Spinner01" android:nextFocusRight="@id/apple_volup" android:nextFocusDown="@id/apple_volup"></ca.idi.tecla.lib.Spinner>
+ <TextView  
+         android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_marginTop="10dip"  
+        android:layout_above="@+id/Spinner01"
+       android:text="@string/planet_prompt"  
+    />
+     <ca.idi.tecla.lib.Spinner android:layout_height="wrap_content" android:id="@+id/Spinner01" android:layout_width="fill_parent" android:prompt="@string/select" android:layout_above="@+id/Spinner02" android:layout_alignLeft="@+id/Spinner02" android:layout_alignRight="@+id/Spinner02" android:nextFocusLeft="@id/apple_prev" android:nextFocusUp="@id/apple_prev" android:nextFocusRight="@id/Spinner02"></ca.idi.tecla.lib.Spinner>
+
+</RelativeLayout>
+
+
+</TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  
+  
+  android:layout_height="fill_parent">
+  	
+
+       
+  
+
+<TableLayout android:id="@+id/TableLayout01" android:layout_alignParentTop="true" android:layout_width="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android" android:stretchColumns="0,1,2" android:layout_height="wrap_content" android:background="@drawable/apple_bg">
+
+<TableRow android:id="@+id/TableRow01" android:layout_width="wrap_content" android:layout_height="wrap_content">
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vol_up_str" android:id="@+id/apple_volup" android:layout_weight="50" android:drawableTop="@drawable/speaker_plus"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mute" android:id="@+id/apple_menu" android:layout_weight="50" android:drawableTop="@drawable/speaker_off"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tvplus" android:id="@+id/apple_next" android:layout_weight="50" android:drawableTop="@drawable/tv_plus"/>
+
+</TableRow>
+<TableRow android:id="@+id/TableRow02" android:layout_width="wrap_content" android:layout_height="wrap_content">
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vol_down_str" android:id="@+id/apple_voldn" android:layout_weight="50" android:drawableTop="@drawable/speaker_minus"/>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power" android:id="@+id/apple_play" android:layout_weight="50" android:drawableTop="@drawable/stop"/>
+
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tvminus" android:id="@+id/apple_prev" android:layout_weight="50" android:drawableTop="@drawable/tv_minus"/>
+
+</TableRow>
+
+
+<RelativeLayout         android:layout_alignParentBottom="true" 
+android:id="@+id/InnerRelativeLayout"
+
+>
+   
+
+
+
+
+
+
+<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner02" android:layout_width="fill_parent" android:layout_alignParentBottom="true"></Spinner>
+<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner01" android:layout_width="fill_parent" android:prompt="@string/select" android:layout_above="@+id/Spinner02" android:layout_alignLeft="@+id/Spinner02" android:layout_alignRight="@+id/Spinner02"></Spinner>
+
+</RelativeLayout>
+
+
+</TableLayout>
+
+</RelativeLayout>
